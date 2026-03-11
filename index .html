@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <meta name="description"
+    content="We aim to provide valuable and useful information about Food Lover Restaurant where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>Food Lover Restaurant</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- button scrollTo -->
+  <button id="topBtn" class="btn"
+    style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; font-size: 16px; display: none; cursor: pointer; border: none; border-radius: 5px; background: #000; color: white;">
+    ⬆</button>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold " href="#home">
+        <img src="logo.png" alt="Logo">
+        Food Lover
+      </a>
+      <!-- الروابط على الشاشات الكبيرة -->
+      <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto gap-3 me-5">
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5 active"
+            href="#history">History</a></li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#offers">Offers</a></li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#contact">contact</a>
+        </li>
+      </ul>
+
+      <!-- زر الثلاث شرط يظهر فقط على الشاشات الصغيرة -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- OFFCANVAS NAVBAR -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+      <a class="navbar-brand fw-bold text-dark" href="#home">
+        <img src="logo.png" alt="Logo">
+        Food Lover
+      </a>
+      <!-- زر X لقفل -->
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item"><a class="nav-link active text-light fw-bolder btn btn-outline-dark p-2 fs-5"
+            href="#history">History</a></li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#offers">Offers</a></li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-dark p-2 fs-5" href="#contact">contact</a>
+        </li>
+      </ul>
+      <hr>
+      <div class="d-grid gap-2">
+        <a href="Customer.html" class="btn btn-outline-primary">Table Reservation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <img src="home_bg.jpeg" alt="Hero Background">
+    <div>
+      <h1 class="h1 fw-bolder">Welcome To <span class="highlight">Food Lover</span> Restaurant</h1>
+      <p class="lead">The Best Food Experience You Can Imagine</p>
+      <button class="Book"><a href="Book a Table.html" class="nav-link text-light">Book a Table</a></button>
+    </div>
+  </header>
+
+  <!-- History Section -->
+  <section id="history" class="py-5">
+    <div class="container">
+      <h2 class="fw-bolder fs-1 text-center">The Food Lover History</h2>
+      <div class="row pt-5">
+        <div class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <p class="fs-5 ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, perferendis a obcaecati
+            laboriosam
+            dignissimos cum iste hic, nihil porro sint deserunt. Mollitia dolorem temporibus id eius, dolor est a
+            sapiente.</p>
+          <p class="fs-5 ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, perferendis a obcaecati
+            laboriosam
+            dignissimos cum iste hic, nihil porro sint deserunt. Mollitia dolorem temporibus id eius, dolor est a
+            sapiente.</p>
+          <button class="btn btn-dark " id="link" data-bs-toggle="modal" data-bs-target="#pizzaModal">Learn
+            More</button>
+        </div>
+        <div class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-2">
+          <img src="about_img.png" alt="History Image" class="img-fluid ">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="pizzaModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title">🍕 Margherita Pizza</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              Margherita Pizza is one of the most popular Italian pizzas.
+              It is made with fresh dough prepared daily, topped with natural
+              tomato sauce, authentic mozzarella cheese, and fresh basil leaves.
+            </p>
+
+            <ul class="list-group">
+              <li class="list-group-item">📏 Size: Medium / Large</li>
+              <li class="list-group-item">💰 Price: Starting from 50 EGP</li>
+              <li class="list-group-item">⏱️ Preparation Time: 15 minutes</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="manu.html" class="btn btn-primary">Add to Order</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Special Offers -->
+  <section id="offers" class="py-5 text-center bg-dark text-white">
+    <div class="container">
+      <h1 class="fw-bolder fs-1">Our Special Offers</h1>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-3">
+          <div class="offer-card"><img src="offer1.png" class="offer-img">
+            <h6>Quattro Pasta</h6>
+            <p>Lorem ipsum dolor sit</p>
+            <p class="p"><del>$ 55.00</del> $25.00</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="offer-card"><img src="offer2.png" class="offer-img">
+            <h6>Vegetarian Pasta</h6>
+            <p>Lorem ipsum dolor sit</p>
+            <p class="p"><del>$ 55.00</del> $30.00</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="offer-card"><img src="offer3.png" class="offer-img">
+            <h6>Gluten-Free Pasta</h6>
+            <p>Lorem ipsum dolor sit</p>
+            <p class="p"><del>$ 55.00</del> $22.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- menu -->
+  <section id="menu" class="">
+    <div class="container">
+      <div class="title">
+        <h1>Our Special Menu</h1>
+        <p>Order two and get third for free</p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-items-left"> </div>
+        <div class="menu-items-left">
+          <div class="menu-item">
+            <img src="food1.png" alt="LASAL Cheese">
+            <div>
+              <h4>LASAL CHEESE <span class="primarytext">$18.00</span></h4>
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. At, explicabo.</p>
+
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="food2.png" alt="JUMBO CRAB 
+SHRIMP">
+            <div>
+              <h4>JUMBO CRAB SHRIMP <span class="primary-text">$24.00</span></h4>
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. At, explicabo.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="food3.png" alt="KOKTAIL 
+JUCIE">
+            <div>
+              <h4>KOKTAIL JUCIE <span class="primarytext">$12.00</span></h4>
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. At, explicabo.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="food4.png" alt="CAPO STEAK">
+            <div>
+              <h4>CAPO STEAK <span class="primarytext">$60.00</span></h4>
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. At, explicabo.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="food5.png" alt="ORGANIC 
+FRUIT SALAD">
+            <div>
+              <h4>ORGANIC FRUIT SALAD <span class="primary-text">$8.00</span></h4>
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. At, explicabo.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="food6.png" alt="CHEESE 
+PIZZA">
+            <div>
+              <h4>CHEESE PIZZA <span class="primarytext">$18.00</span></h4>
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. At, explicabo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="laft">
+
+          <div class=" menu-items-right">
+            <div class="menu-items-right">
+              <div class="menu-item">
+                <img src="food7.jpeg" alt="KOFTA 
+MEAT">
+                <div>
+                  <h4>KOFTA MEAT <span class="primarytext">$40.00</span></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, explicabo.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <img src="food8.jpeg" alt="SPANISH 
+PIES">
+                <div>
+                  <h4>SPANISH PIES <span class="primarytext">$14.00</span></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, explicabo.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <img src="food9.jpeg" alt="CHEESE 
+TOST">
+                <div>
+                  <h4>CHEESE TOST <span class="primarytext">$6.00</span> </h4>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, explicabo.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <img src="food10.jpeg" alt="FRUIT 
+SALAD">
+                <div>
+                  <h4>FRUIT SALAD <span class="primary-text">
+                      $14.00</span> </h4>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, explicabo.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <img src="food11.jpeg" alt="CHICKEN 
+SHAWARMA">
+                <div>
+                  <h4>CHICKEN SHAWARMA <span class="primary-text">$20.00</span></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, explicabo.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <img src="food12.jpeg" alt="MEGA 
+CHEESE PIZZA">
+                <div>
+                  <h4>MEGA CHEESE PIZZA <span class="primary-text"> $30.00</span> </h4>
+                  <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. At, explicabo.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-third text-uppercase"><a href="manu.html">order food</a> </button>
+    </div>
+  </section>
+
+  <section id="section5">
+    <div class="container">
+      <div class="row">
+        <!-- Slide 1 -->
+        <div class="col-12 col-ms-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+          <div class="slide3">
+            <img src="breckfastIcon.png" alt="img">
+            <h5>Breakfast</h5>
+            <p>8:00 am to 10:00 am</p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="col-12 col-ms-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+          <div class="slide3">
+            <img src="lunchIcon.png" alt="img">
+            <h5>Lunch</h5>
+            <p>40:00 pm to 7:00</p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="col-12 col-ms-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+          <div class="slide3">
+            <img src="dinnerIcon.png" alt="img">
+            <h5>Dinner</h5>
+            <p>9:00 pm to 1:00 AM</p>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="col-12 col-ms-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+          <div class="slide3">
+            <img src="dessertIcon.png" alt="img">
+            <h5>Dessert</h5>
+            <p>All day</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 bg-dark text-white text-center">
+    <div class="container">
+
+      <h1 class="fw-bold mb-4">Our Food Gallery</h1>
+
+      <div id="ga" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active text-center">
+            <img src="gallery1.jpeg" class="gallery-img d-inline-block" alt="Food 1">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="gallery2.jpeg" class="gallery-img d-inline-block">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="gallery3.jpeg" class="gallery-img d-inline-block">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="gallery4.jpeg" class="gallery-img d-inline-block">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="gallery5.jpeg" class="gallery-img d-inline-block">
+          </div>
+
+          <div class="carousel-item text-center">
+            <img src="gallery6.jpeg" class="gallery-img d-inline-block">
+          </div>
+
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#ga" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ga" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+
+        <div class="carousel-indictors mt-5">
+          <button type="button" data-bs-target="#ga" data-bs-slide-to="0" class="btn btn-outaline-dark"
+            class="active">🔵</button>
+          <button type="button" data-bs-target="#ga" data-bs-slide-to="1" class="btn btn-outaline-dark">🔵</button>
+          <button type="button" data-bs-target="#ga" data-bs-slide-to="2" class="btn btn-outaline-dark">🔵</button>
+          <button type="button" data-bs-target="#ga" data-bs-slide-to="3" class="btn btn-outaline-dark">🔵</button>
+          <button type="button" data-bs-target="#ga" data-bs-slide-to="4" class="btn btn-outaline-dark">🔵</button>
+          <button type="button" data-bs-target="#ga" data-bs-slide-to="5" class="btn btn-outaline-dark">🔵</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h1 class="text-center">Contact US</h1>
+      <div class="row mt-5">
+        <div class="col-12 col-ms-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+          <h5>ADDRESS</h5>
+          <p> <samp class="samp"> <i class="fa-solid fa-location-dot"></i>
+            </samp> Mansoura,Beside studiumEgypt</p>
+          <p> <samp class="samp"> <i class="fa-solid fa-phone"></i>
+            </samp> Phone: 123456789</p>
+          <i class="fa-solid fa-envelope"></i>
+          <p> <samp class="samp"></samp>support@foodlover.com</p>
+
+          <h3>WORKING HOURS</h3>
+          <p>8:00 am to 11:00 pm on Weekdays</p>
+          <p>11:00 am to 1:00 Am on Weekends</p>
+
+          <h3>FOLLOW US</h3>
+          <div class="mt-4 d-flex gap-3">
+            <a href="https://github.com/mahmoudibrahem275" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/mhmwdabrahymkhlf175-dotcom" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/eng_mahmoud_ibrahim_/?utm_source=qr&r=nametag" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1RE8XuzRWg/" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/YOUR_TWITTER" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/201120283294" target="_blank"
+              class="nav-link bg-dark text-light p-2 rounded-circle btn btn-dark"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-ms-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 mt-2">
+          <form id="contactForm" class="needs-validation" novalidate
+            action="https://api.sheetmonkey.io/form/93i8znffDuJVvTTBquYKRr">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+              <div class="invalid-feedback">Please enter the subject.</div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" style="height: 30vh;" id="message" placeholder="Message" rows="3"
+                required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <button class="btn btn-dark w-100" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-capitalize">
+    Copyright &copy; 2025 Food Lover - All rights reserved | Designed By Engineer Mahmoud ibrhem
+    2026.
+  </footer>
+
+  <!-- Coding btn ScrollTo   -->
+  <script>
+    let btn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      if (window.scrollY > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+
+
+  </script>
+
+  <!-- Coding JS form  -->
+  <script>
+      (() => {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault(); event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      })();
+  </script>
+
+  <!-- link JS -->
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
